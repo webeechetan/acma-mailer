@@ -1,0 +1,52 @@
+/* @font-face {
+     font-family: 'MyriadProLight';
+     src: url('../fonts/MyriadProLight.eot');
+     src: url('../fonts/MyriadProLight.eot') format('embedded-opentype'), url('../fonts/MyriadProLight.woff2') format('woff2'), url('../fonts/MyriadProLight.woff') format('woff'), url('../fonts/MyriadProLight.ttf') format('truetype'), url('../fonts/MyriadProLight.svg#MyriadProLight') format('svg');
+}
+ @font-face {
+     font-family: 'MyriadProRegular';
+     src: url('../fonts/MyriadProRegular.eot');
+     src: url('../fonts/MyriadProRegular.eot') format('embedded-opentype'), url('../fonts/MyriadProRegular.woff2') format('woff2'), url('../fonts/MyriadProRegular.woff') format('woff'), url('../fonts/MyriadProRegular.ttf') format('truetype'), url('../fonts/MyriadProRegular.svg#MyriadProRegular') format('svg');
+}
+ @font-face {
+     font-family: 'MyriadProSemibold';
+     src: url('../fonts/MyriadProSemibold.eot');
+     src: url('../fonts/MyriadProSemibold.eot') format('embedded-opentype'), url('../fonts/MyriadProSemibold.woff2') format('woff2'), url('../fonts/MyriadProSemibold.woff') format('woff'), url('../fonts/MyriadProSemibold.ttf') format('truetype'), url('../fonts/MyriadProSemibold.svg#MyriadProSemibold') format('svg');
+}
+ @font-face {
+     font-family: 'MyriadProBold';
+     src: url('../fonts/MyriadProBold.eot');
+     src: url('../fonts/MyriadProBold.eot') format('embedded-opentype'), url('../fonts/MyriadProBold.woff2') format('woff2'), url('../fonts/MyriadProBold.woff') format('woff'), url('../fonts/MyriadProBold.ttf') format('truetype'), url('../fonts/MyriadProBold.svg#MyriadProBold') format('svg');
+} */
+ @font-face{
+    font-family:"Myriad Pro";
+    src:url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Light.eot);
+    src:url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Light.eot?#iefix) format("embedded-opentype"),url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Light.woff2) format("woff2"),url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Light.woff) format("woff"),url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Light.ttf) format("truetype"),url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Light.svg#MyriadPro-Light) format("svg");
+    font-weight:300;
+    font-style:normal;
+    text-rendering:optimizeLegibility
+}
+@font-face{
+    font-family:"Myriad Pro";
+    src:url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Regular.eot);
+    src:url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Regular.eot?#iefix) format("embedded-opentype"),url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Regular.woff2) format("woff2"),url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Regular.woff) format("woff"),url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Regular.ttf) format("truetype"),url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Regular.svg#MyriadPro-Regular) format("svg");
+    font-weight:400;
+    font-style:normal;
+    text-rendering:optimizeLegibility
+}
+@font-face{
+    font-family:"Myriad Pro";
+    src:url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Semibold.eot);
+    src:url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Semibold.eot?#iefix) format("embedded-opentype"),url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Semibold.woff2) format("woff2"),url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Semibold.woff) format("woff"),url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Semibold.ttf) format("truetype"),url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Semibold.svg#MyriadPro-Semibold) format("svg");
+    font-weight:600;
+    font-style:normal;
+    text-rendering:optimizeLegibility
+}
+@font-face{
+    font-family:"Myriad Pro";
+    src:url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Bold.eot);
+    src:url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Bold.eot?#iefix) format("embedded-opentype"),url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Bold.woff2) format("woff2"),url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Bold.woff) format("woff"),url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Bold.ttf) format("truetype"),url(//assorted.downloads.oppo.com/static/assets/fonts/Myriad_Pro/MyriadPro-Bold.svg#MyriadPro-Bold) format("svg");
+    font-weight:700;
+    font-style:normal;
+    text-rendering:optimizeLegibility
+}
