@@ -7,6 +7,9 @@ use App\Repositories\GroupRepository;
 use App\Repositories\UserRepository;
 use App\Repositories\GroupUserRepository;
 use Session;
+use App\Models\Group;
+use App\Models\User;
+use App\Models\GroupUser;
 
 class GroupUsersController extends Controller
 {
@@ -120,6 +123,9 @@ class GroupUsersController extends Controller
                 $i++;
                 if($i==1) { continue; }
                 $data   =   fgetcsv($file_handle);
+                if(!$data){
+                    continue;
+                }
                 $email = $data[0];
                 $group = $data[1];
                 
@@ -133,40 +139,29 @@ class GroupUsersController extends Controller
                 //$this->groupUserRepository->che ();
 
             }
-            $array = array_unique($unique);
+
             
-            $listGroup =[];
-            foreach($array as $key =>$value){
-            $groups = $this->groupRepository->findbyname($value);
             
-            if(!empty($groups)){
-                    $listGroup[$value] = $groups[0]['id'];
-            }else{
-                $data['name'] = $value;
-                $data['code'] = substr($value,0,2);
-                $listGroup[$value] =  $this->groupRepository->create($data)->id;
-            }
-            }
-        
-            foreach($row as $key =>$value){
-                $usergroups =[];
-                $email = $key ;
-                $user = $this->userRepository->findByEmail($email);
-                if(!empty($user)){
-                    $user_id = $user[0]['id'];
-                }else{
-                    $data['email'] = $email;
-                    $user_id = $this->userRepository->create($data)->id;
+            // all groups from csv
+            $users = array_unique($unique);
+            foreach($row as $key => $value){
+                $user = User::where('email',$key)->first();
+                if(!$user){
+                   $user = new User();
+                   $user->email = $key;
+                   $user->save(); 
                 }
-                
-                $usergroups =[];
-                foreach($value as  $group){
-                    $usergroups['user_id'] = $user_id;
-                    $usergroups['group_id'] = $listGroup[trim($group)];
-                    $this->groupUserRepository->create($usergroups);
+                $grps = [];
+                if($user){
+                    foreach($value as $group_name){
+                        $group = Group::where('name',$group_name)->first();
+                        array_push($grps,$group->id);
+                    }
+                    $user->getGroups()->sync($grps);
                 }
-                //return redirect('/allgroupuser');
             }
+       
+
              fclose($file_handle);
              return redirect('/group-users');
         } else {

@@ -24,8 +24,13 @@ class SentboxController extends Controller
        $this->groupUserRepository = $groupUserRepository;
    }
 
-   public function test(){
-       echo phpinfo();
+   public function test($id = null){
+    $format = Sentbox::find($id);
+    $groups = $this->groupRepository->all();
+    return view('compose-test', [
+        'data' => $groups,
+        'format' => $format
+    ]);
    }
 
    public function index()
@@ -58,8 +63,10 @@ class SentboxController extends Controller
    }
 
    public function sendEmail(Request $request) {
+
         $paths = $users = $selectedfile = array();
         $data = $request->toArray();
+        
         if(isset($data['selectedfile']) && !empty($data['selectedfile'])) {
             foreach ($data['selectedfile'] as $name) {
                 $selectedfile[] = $name;
@@ -104,6 +111,11 @@ class SentboxController extends Controller
         $data['to_emails'] = implode(',',$users);
         $data['group_ids'] = implode(',', $data['group_ids']);
         $sendData = $this->sentboxRepository->create($data);
+
+        // echo "Hello";
+        // echo "<pre>";
+        // print_r($sendData);
+        // exit;
         $sentbox = $sendData->toArray();
         $sentbox['from_email'] = $data['from_email'];
         
@@ -213,6 +225,7 @@ class SentboxController extends Controller
             }
         }
     }
+    
    public function mailDetail($id) {
        $attachments = array();
         $data = $this->sentboxRepository->find($id);

@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
+use App\Models\Group;
+use App\Models\GroupUser;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -34,7 +38,13 @@ Route::group(['middleware' => 'admin'], function () {
     Route::post('/sendEmail', 'SentboxController@sendEmail');
     Route::get('/sentbox', 'SentboxController@index');
     Route::get('/mail/{id}', 'SentboxController@mailDetail');
-    // Route::get('/test', 'SentboxController@test');
+
+
+    // THIS IS FOR TESTING PURPOSE 
+    
+    Route::get('/test', 'SentboxController@test');
+
+    //The above code is for testing purpose
 
     Route::get('/groups', 'GroupsController@index');
     Route::get('/create-group', 'GroupsController@create');
@@ -87,3 +97,8 @@ Route::get('sendemail', function () {
 */
 
 Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index']);
+
+Route::get('/group-test',function(){
+    $user = User::find(2289);
+    $user->getGroups()->sync(['2','3']);
+});

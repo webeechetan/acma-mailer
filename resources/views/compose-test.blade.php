@@ -8,7 +8,7 @@
 					<div class="widget">
 						<div class="widget-head">
 							<div class="col-md-12">
-								<div class="">Compose Mail</div>
+								<div class="">Compose Mail Test</div>
 								
 							</div>
 						</div>
@@ -86,10 +86,35 @@
                                     </textarea>
                                 </div>
                             </div>
+
+
+                            
+                            <div class="row">
+                                <div class="col-lg-5 pr-lg-2">
+                                    <div class="form-group">
+                                        <textarea name="footer_left_area" id="footer_left_area" class="form-control" placeholder="Signature">
+
+                                        </textarea>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-2"></div>
+
+                                <div class="col-lg-5 pl-lg-2">
+                                    <div class="form-group">
+                                        <textarea name="footer_right_area" id="footer_right_area" class="form-control" placeholder="Right Corner">
+
+                                        </textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
                             <!-- Group -->
                             <div class="form-group">
                                 <div class="col-lg-4">
-                                    <a id="select-files" href="javascript:;" class="btn btn-primary"><i class="fa fa-paperclip"></i> Attach Files</a>
+                                    <a id="select-files" href="javascript:;" class="btn btn-primary"><i class="fa fa-paperclip"></i> Test Attach Files</a>
                                     <input type="file"  class="attachments" style="display:none;" multiple/>
                                 </div>
                             </div>

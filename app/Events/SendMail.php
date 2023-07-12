@@ -23,6 +23,7 @@ class SendMail
     public function __construct($user)
     {
         $this->user = $user;
+
     }
 
     /**

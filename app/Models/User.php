@@ -22,6 +22,10 @@ class User extends Model
         return $this->hasMany('App\Models\GroupUser', 'user_id', 'id');
     }
 
+    public function getGroups(){
+        return $this->belongsToMany('App\Models\Group');
+    }
+
    
 
     
